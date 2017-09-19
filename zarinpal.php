@@ -92,7 +92,7 @@ class Zarinpal extends Payment
             $userContent=$userdata->saveContent;     
             
 			$this->updateTrans($result['RefID']);
-			$this->setFlash('success','پرداخت با موفقیت انجام شد'.'<br>'.json_encode($userdata));
+			$this->setFlash('success','پرداخت با موفقیت انجام شد');
 			return true;
 		} else if(isset($result['Status']))
 			$this->errors($result['Status']);
